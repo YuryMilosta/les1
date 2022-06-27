@@ -1,3 +1,5 @@
+package animals;
+
 public class Hen extends Animal implements Jumpable {
     private final int RUN_LIMIT = 100;
     private final float JUMP_LIMIT = 10f;

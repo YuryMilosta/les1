@@ -1,3 +1,5 @@
+package animals;
+
 public class Hippo extends Animal implements Swimable {
     private int swim_limit;
     private final int RUN_LIMIT = 50;

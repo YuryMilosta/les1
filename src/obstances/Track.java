@@ -1,3 +1,6 @@
+package obstances;
+import animals.*;
+
 public class Track implements Let {
     private int length;
 

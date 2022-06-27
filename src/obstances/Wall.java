@@ -1,3 +1,6 @@
+package obstances;
+import animals.*;
+
 public class Wall implements Let {
     private float height;
 

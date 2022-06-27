@@ -1,15 +1,13 @@
-import java.util;
+package animals;
+import java.util.*;
+
 public class Team {
-    /**
-     * 2. Добавить класс Team, который будет содержать: название команды, массив из 4-х участников
-     * (т.е. в конструкторе можно сразу всех участников указывать), метод для вывода информации о
-     * членах команды прошедших дистанцию, метод вывода информации обо всех членах команды.
-     */
+
     private String nameTeam = "unknown";
     Animal[] zoo = {new Cat("Murzik"), new Hen("Izzy"), new Hippo("Hippopo")};
     public Animal[] teamAnimal = new Animal[4];
     Random random = new Random();
-    // Формируем команду
+    // Р¤РѕСЂРјРёСЂСѓРµРј РєРѕРјР°РЅРґСѓ
     public Team(String nameTeam) {
         this.nameTeam = nameTeam;
         for(int i = 0; i < 4; i++){
@@ -17,7 +15,7 @@ public class Team {
             teamAnimal[i] = zoo[ran];
         }
     }
-    // Вывод информации о членах команды
+    // Р’С‹РІРѕРґ РёРЅС„РѕСЂРјР°С†РёРё Рѕ С‡Р»РµРЅР°С… РєРѕРјР°РЅРґС‹
     public void printInformationAboutTheTeam() {
         System.out.println("Team: " + nameTeam);
         for(Animal a : teamAnimal) {
@@ -30,7 +28,7 @@ public class Team {
         }
         System.out.println();
     }
-    // Вывод информации кто прошел дистанцию
+    // Р’С‹РІРѕРґ РёРЅС„РѕСЂРјР°С†РёРё РєС‚Рѕ РїСЂРѕС€РµР» РґРёСЃС‚Р°РЅС†РёСЋ
     public void passedTheDistance(){
         System.out.println(nameTeam + "\n");
         for (Animal a : teamAnimal){
