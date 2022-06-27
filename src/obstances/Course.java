@@ -1,11 +1,13 @@
+package obstances;
+import java.util.*;
+import animals.*;
+
+
 public class Course {
-    /**
-     * 3. Добавить класс Course (полоса препятствий), в котором будут находиться:
-     * массив препятствий, метод который будет просить команду пройти всю полосу;
-     */
+
     Let[] let = new Let[3];
     Random random = new Random();
-    // Создаем полосу препятствий
+    // РЎРѕР·РґР°РµРј РїРѕР»РѕСЃСѓ РїСЂРµРїСЏС‚СЃС‚РІРёР№
     public Course() {
         Track track = new Track(random.nextInt(100));
         Wall wall = new Wall(random.nextFloat() * 10);
@@ -14,14 +16,14 @@ public class Course {
         let[1] = (Let) wall;
         let[2] = (Let) water;
     }
-    //Вывод информации о полосе препятствий
+    //Р’С‹РІРѕРґ РёРЅС„РѕСЂРјР°С†РёРё Рѕ РїРѕР»РѕСЃРµ РїСЂРµРїСЏС‚СЃС‚РІРёР№
     public void printInformationAboutTheObstacle() {
         System.out.println("Length track: " + ((Track) let[0]).getLength());
         System.out.println("Height wall: " + ((Wall) let[1]).getHeight());
         System.out.println("Length water: " + ((Water) let[2]).getLength());
         System.out.println();
     }
-    // Проходим полосу препятствий
+    // РџСЂРѕС…РѕРґРёРј РїРѕР»РѕСЃСѓ РїСЂРµРїСЏС‚СЃС‚РІРёР№
     public void passObstacles(Team team){
         for(Animal animal : team.teamAnimal){
             for(Let l : let){
@@ -34,4 +36,3 @@ public class Course {
         }
     }
 }
-

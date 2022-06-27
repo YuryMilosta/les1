@@ -1,3 +1,6 @@
+package obstances;
+import animals.*;
+
 public class Water implements Let {
     private int length;
 

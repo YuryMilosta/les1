@@ -1,7 +1,7 @@
-
+import animals.*;
+import obstances.*;
 
 public class Main {
-
     public static void main(String[] args) {
         Animal[] zoo = {new Cat("Murzik"), new Hen("Izzy"), new Hippo("Hippopo")};
         Track track = new Track(80);
